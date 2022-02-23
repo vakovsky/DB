@@ -21,7 +21,7 @@ namespace ConsoleApplication6
             OleDbConnection oleDbConnection;
             oleDbConnection = new OleDbConnection();
             oleDbConnection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;" +
-                @"Data Source=C:\Users\Teacher412\Documents\Database2.accdb;";
+                @"Data Source=Database2.accdb;";
             oleDbConnection.Open();
 
             //INSERT
