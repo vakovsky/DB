@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Data.OleDb;
 
@@ -86,7 +85,7 @@ namespace ConsoleApplication6
             Console.WriteLine(oleDbDataReader["name"]);
             oleDbDataReader.Close();*/
 
-            OleDbCommand oleDbCommand;
+            /*OleDbCommand oleDbCommand;
             oleDbCommand = new OleDbCommand();
             oleDbCommand.Connection = oleDbConnection;
             oleDbCommand.CommandText = "select * from users";
@@ -107,8 +106,9 @@ namespace ConsoleApplication6
             foreach(User user in users)
             {
                 Console.WriteLine("{0} {1} {2} {3}", user.Id, user.Name, user.Email, user.Age);
-            }
+            }*/
 
+            //DISCONNECTION
             oleDbConnection.Close();
 
           
