@@ -97,8 +97,6 @@ namespace ConsoleApplication6
                 User user = new User();
                 user.Id = oleDbDataReader.GetInt32(0);
                 user.Name = oleDbDataReader.GetString(1);
-                user.Email = oleDbDataReader.GetString(2);
-                user.Age = oleDbDataReader.GetInt32(1);
                 users.Add(user);
             }
             oleDbDataReader.Close();
