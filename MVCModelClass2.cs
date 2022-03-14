@@ -5,7 +5,7 @@ class MVCModelClass2
         public void Open()
         {
             //CONNECTION
-            OleDbConnection oleDbConnection;
+            //OleDbConnection oleDbConnection;
             oleDbConnection = new OleDbConnection();
             oleDbConnection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;" +
                 @"Data Source=Database2.accdb;";
