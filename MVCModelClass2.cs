@@ -18,7 +18,6 @@ class MVCModelClass2
         {
             //INSERT
             this.Open();
-            OleDbCommand oleDbCommand;
             oleDbCommand = new OleDbCommand();
             oleDbCommand.Connection = oleDbConnection;
             string command = String.Format(
@@ -33,7 +32,6 @@ class MVCModelClass2
         {
             //DELETE
             this.Open();
-            OleDbCommand oleDbCommand;
             oleDbCommand = new OleDbCommand();
             oleDbCommand.Connection = oleDbConnection;
             oleDbCommand.CommandText = "delete from users where id =" + id + "";
@@ -45,7 +43,6 @@ class MVCModelClass2
         {
             //UPDATE
             this.Open();
-            OleDbCommand oleDbCommand;
             oleDbCommand = new OleDbCommand();
             oleDbCommand.Connection = oleDbConnection;
             oleDbCommand.CommandText = "update users set name = \"" + UserName + "\" where id =" + id + "";
@@ -57,7 +54,6 @@ class MVCModelClass2
         {
             //SELECT
             this.Open();
-            OleDbCommand oleDbCommand;
             oleDbCommand = new OleDbCommand();
             oleDbCommand.Connection = oleDbConnection;
             oleDbCommand.CommandText = "select * from users where id = " + id + "";
@@ -80,7 +76,6 @@ class MVCModelClass2
         {
 
             this.Open();
-            OleDbCommand oleDbCommand;
             oleDbCommand = new OleDbCommand();
             oleDbCommand.Connection = oleDbConnection;
             oleDbCommand.CommandText = "select * from users";
