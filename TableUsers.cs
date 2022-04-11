@@ -60,7 +60,12 @@ namespace ConsoleApp8
             OleDbCommand oleDbCommand;
             oleDbCommand = new OleDbCommand();
             oleDbCommand.Connection = oleDbConnection;
-            oleDbCommand.CommandText = "update users set Name = \"" + user.Name + "\" where id =" + user.Id + "";
+            oleDbCommand.CommandText = "update users set " +
+                "Name = \"" + user.Name + "\"," + 
+                "Email = \"" + user.Email + "\"," +
+                "Age = \"" + user.Age +
+                "\" where id =" + user.Id + "";
+            Console.WriteLine(oleDbCommand.CommandText);
             oleDbCommand.ExecuteNonQuery();
             this.Close();
         }
