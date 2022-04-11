@@ -4,13 +4,6 @@ using System.Data.OleDb;
 
 namespace ConsoleApp8
 {
-    class User //Колони в таблицата
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Email { get; set; }
-        public int Age { get; set; }
-    }
     class TableUsers //Таблицата Users
     {
         OleDbConnection oleDbConnection;
