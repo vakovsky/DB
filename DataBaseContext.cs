@@ -16,7 +16,7 @@ namespace ConsoleApp1
     }
     public class DataBaseContext : DbContext
     {
-        public DataBaseContext() : base(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Dudin\Documents\Database2.mdf;Integrated Security=True;Connect Timeout=30") { }
+        public DataBaseContext() : base(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=../../Database2.mdf;Integrated Security=True;Connect Timeout=30") { }
         public DbSet<User> Users { get; set; }
     }
 }
