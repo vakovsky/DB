@@ -6,6 +6,6 @@
 
 ## Table Users Code First
 ### 1. [DataBaseContext.cs](https://github.com/vakovsky/DB/blob/main/DataBaseContext.cs)
-### 2. [Program.cs](https://github.com/vakovsky/DB/blob/main/Program.cs)
+### 2. [ProgramCF.cs](https://github.com/vakovsky/DB/blob/main/ProgramCF.cs)
 ### 3. [Database2.mdf](https://github.com/vakovsky/DB/blob/main/Database2.mdf)
 
