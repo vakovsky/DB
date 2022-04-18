@@ -1,4 +1,8 @@
- class Program
+using System;
+
+namespace ConsoleAppCF
+{  
+    class Program
     {
         static void Main(string[] args)
         {
@@ -56,3 +60,4 @@
             }
         }
     }
+}
