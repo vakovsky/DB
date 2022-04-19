@@ -9,3 +9,4 @@
 ### 2. [ProgramCF.cs](https://github.com/vakovsky/DB/blob/main/ProgramCF.cs)
 ### 3. [Database2.mdf](https://github.com/vakovsky/DB/blob/main/Database2.mdf)
 
+Project Visual Studio 2019 .Net Framework 4.7.2 EntityFramework 6.0.0
