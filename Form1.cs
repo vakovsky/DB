@@ -57,7 +57,7 @@ namespace WindowsFormsAppDB
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+            //SELECT
             using (var context = new DataBaseContext())
             {
                 int id = int.Parse(this.comboBox1.Text);
