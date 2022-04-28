@@ -83,6 +83,7 @@ namespace WindowsFormsAppDB
                 user.Email = this.textBox2.Text;
                 user.Age = int.Parse(this.textBox3.Text);
                 context.SaveChanges();
+                Form1_Load(this, e);
             }
 
         }
