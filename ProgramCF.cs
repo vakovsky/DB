@@ -9,12 +9,10 @@ namespace ConsoleAppCF
             //INSERT
             using (var context = new DataBaseContext())
             {
-                var user = new User
-                {
-                    Name = "User1",
-                    Email = "user1@site.com",
-                    Age = 18,
-                };
+                var user = new User();                  
+                user.Name = Console.ReadLine();
+                user.Email = Console.ReadLine();
+                user.Age = int.Parse(Console.ReadLine());              
                 context.Users.Add(user);
                 context.SaveChanges();
             }
@@ -22,18 +20,20 @@ namespace ConsoleAppCF
             //SELECT
             using (var context = new DataBaseContext())
             {
-                var user = (from d in context.Users
-                            where d.Name == "User1"
-                            select d).Single();
+                int id = int.Parse(Console.ReadLine());
+                var user = (from u in context.Users
+                            where u.UserId == id
+                            select u).Single();
                 Console.WriteLine(user.Name);
             }
 
             //UPDATE
             using (var context = new DataBaseContext())
             {
-                var user = (from d in context.Users
-                               where d.Name == "User1"
-                               select d).Single();
+                int id = int.Parse(Console.ReadLine());
+                var user = (from u in context.Users
+                               where u.UserId == id
+                               select u).Single();
                 user.Name = "User2";
                 context.SaveChanges();
             }
@@ -41,21 +41,24 @@ namespace ConsoleAppCF
             //DELETE
             using (var context = new DataBaseContext())
             {
-                var bay = (from d in context.Users where d.Name == "User2" select d).Single();
-                context.Users.Remove(bay);
+                int id = int.Parse(Console.ReadLine());
+                var user = (from u in context.Users 
+                           where u.UserId == id
+                           select u).Single();
+                context.Users.Remove(user);
                 context.SaveChanges();
             }
 
             //SELECT ALL
             using (var context = new DataBaseContext())
             {
-                var users = from b in context.Users
-                            orderby b.Name
-                            select b;
+                var users = from u in context.Users
+                            orderby u.UserId
+                            select u;
                 Console.WriteLine("All users in the database:");
                 foreach (var user in users)
                 {
-                    Console.WriteLine(user.Name);
+                    Console.WriteLine("{0} {1}", user.UserId, user.Name);
                 }
             }
         }
